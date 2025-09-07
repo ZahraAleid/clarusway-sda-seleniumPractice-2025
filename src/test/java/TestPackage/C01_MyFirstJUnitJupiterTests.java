@@ -5,11 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.pagefactory.ByChained;
 
 
-
-public class MyFirstJUnitJupiterTests {
+public class C01_MyFirstJUnitJupiterTests {
         WebDriver driver;
 
         @Test
