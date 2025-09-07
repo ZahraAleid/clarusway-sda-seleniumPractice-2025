@@ -20,7 +20,7 @@ public class C03_XPath {
     void setup(){
      driver = new ChromeDriver();
      driver.manage().window().maximize();
-     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
      driver.get("https://thinking-tester-contact-list.herokuapp.com/");
     }
 
