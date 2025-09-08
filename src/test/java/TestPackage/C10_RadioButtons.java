@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class C10_RadioButtons {
     WebDriver driver;
-    String url ="https://www.facebook.com/";
+    String url ="https://www.facebook.com/"; //facebook
 
     @Test
     void radioButtonTest() {
