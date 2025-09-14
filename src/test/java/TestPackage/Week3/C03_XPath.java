@@ -1,4 +1,4 @@
-package TestPackage;
+package TestPackage.Week3;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;

@@ -1,4 +1,4 @@
-package TestPackage;
+package TestPackage.Week2;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
