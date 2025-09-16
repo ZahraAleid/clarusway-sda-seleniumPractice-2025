@@ -64,15 +64,50 @@ public class C45_WriteExcel {
         Sheet sheet = workbook.getSheetAt(0);
         sheet.getRow(0).createCell(2).setCellValue("POPULATION");
 
+        //add population values with random numbers
+
+        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            int extra = i*2+1;
+            int extra2 = i+2;
+            if (row != null) {
+                row.createCell(2).setCellValue("1"+extra+"."+extra2+" M");
+            }
+        }
+
+
         FileOutputStream fos = new FileOutputStream(RESOURCES.resolve("Countries.xlsx").toString());
         workbook.write(fos);
         fos.close();
         workbook.close();
 
 
-        //HW: print populations of the countries
-
 
     }
+
+    //HW: print populations of the countries
+
+    @Test
+    void printPopulation() throws IOException {
+        FileInputStream fis = new FileInputStream(RESOURCES.resolve("Countries.xlsx").toString());
+        Workbook workbook = WorkbookFactory.create(fis);
+        fis.close();
+
+        Sheet sheet = workbook.getSheetAt(0);
+
+        int lastRowIndex = sheet.getLastRowNum();
+
+        System.out.println("Population of each country:");
+        for (int i = 1; i <= lastRowIndex; i++) {
+            Row row = sheet.getRow(i);
+            String country = row.getCell(0).toString();
+            String population = row.getCell(2).toString();
+            System.out.println(country + " -> " + population);
+        }
+
+        workbook.close();
+    }
+
+
 
 }
