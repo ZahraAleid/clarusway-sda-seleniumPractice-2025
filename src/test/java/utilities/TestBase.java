@@ -45,7 +45,7 @@ Key points:
 */
 
 public abstract class TestBase {
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
     @BeforeEach
     void setUp() {
